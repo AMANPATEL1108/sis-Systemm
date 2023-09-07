@@ -2,23 +2,182 @@
 <html>
 
 <head>
-    <title>Home Page</title>
     <link rel="stylesheet" href="homecss.css">
 </head>
 
 <body>
-
-
-
-
-    <div class="parent ">
-        <img src="C:\Users\ASUS\Desktop\sis\photos\wave.jpg" alt="Wave" class="wave">
-        <img src="C:\Users\ASUS\Desktop\sis\photos\ganpat.png " alt="Avatar " class="ganpat">
-
+    <div class="preloader">
+        <div class="loader"></div>
     </div>
+    <header style="background-image:url(.\Desktop\sis\photos\wave.jpg); ">
+        <div class="container ">
+            <div class="header-inner ">
+                <div class="header-logo ">
+                    <img src="C:\Users\ASUS\Desktop\sis\photos\ganpat.png ">
+                </div>
+                <div class="header-heading ">
+                    <h2>Student Dashboard</h2>
+                    <p class="success-msg" style="display: none;"> 👤 You're Logged.
+                        <a href="#" id="logout-link-msg">Log Out</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
 
+    <main class="site-main">
+        <div class="login-screen-main">
+            <div class="login-screen">
+                <h2>Login</h2>
+                <form id="login-form">
+                    <input type="text" id="username" placeholder="Username">
+                    <input type="password" id="password" placeholder="Password">
+                    <button type="button" id="login-button">Login</button>
+                </form>
+                <p id="login-error" class="error-message"></p>
+            </div>
+        </div>
+
+        <div class="sidebar-main">
+            <div class="side-inner">
+                <ul class="tabing-list">
+                    <li class="tab-item" data-tab="home">Home</li>
+                    <li class="tab-item" data-tab="about">About</li>
+                    <li class="tab-item" data-tab="teacher">Teacher</li>
+                    <li class="tab-item" data-tab="student">Student</li>
+                    <li class="tab-item" data-tab="logout">Log Out</li>
+                </ul>
+            </div>
+        </div>
+        <div class="site-content">
+            <div class="site-con-inner">
+                <div class="tabbing-data">
+                    <div class="tab-content" id="home-content" data-tab-content="home">
+                        Home
+                    </div>
+                    <div class="tab-content" id="about-content" data-tab-content="about">About</div>
+                    <div class="tab-content" id="teacher-content" data-tab-content="teacher">Teacher</div>
+                    <div class="tab-content" id="student-content" data-tab-content="student">Student</div>
+                </div>
+
+            </div>
+        </div>
+    </main>
 
 
 </body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // Initially hide the sidebar and tab content
+        $('.sidebar-main').hide();
+        $('.tab-content').hide();
+
+        // Define predefined username and password
+        var predefinedUsername = "admin";
+        var predefinedPassword = "admin";
+
+        // Function to show the success message and logout link
+        function showSuccessMessage() {
+            $('.login-screen').hide();
+            $('.sidebar-main').show();
+            $('.tab-content').hide(); // Hide all tab contents
+            $('#about-content').show(); // Show the About tab content by default
+            $('.tab-item.active').removeClass('active'); // Remove active class from all tabs
+            $('.success-msg').show();
+
+            // Handle logout link click event
+            $('#logout-link, #logout-link-msg').click(function(e) {
+                e.preventDefault();
+                // Hide the success message and logout link
+                $('.success-msg').hide();
+                // Show the login screen
+                $('.login-screen').show();
+                // Hide the sidebar and tab content
+                $('.sidebar-main').hide();
+                $('.tab-content').hide();
+                // Clear username and password fields
+                $('#username').val('');
+                $('#password').val('');
+            });
+        }
+
+        // Handle tab item click
+        $('.tab-item').click(function() {
+            // Hide all tab contents
+            $('.tab-content').hide();
+            // Remove the 'active' class from all tab items
+            $('.tab-item.active').removeClass('active');
+            // Get the data-tab attribute value of the clicked tab
+            var tabId = $(this).data('tab');
+            // Show the corresponding tab content
+            $('#' + tabId + '-content').show();
+            // Add the 'active' class to the clicked tab
+            $(this).addClass('active');
+        });
+
+        // Handle login button click
+        $('#login-button').click(function() {
+            var enteredUsername = $('#username').val();
+            var enteredPassword = $('#password').val();
+
+            // Check if the entered username and password match the predefined credentials
+            if (enteredUsername === predefinedUsername && enteredPassword === predefinedPassword) {
+                // Show the success message and logout link
+                showSuccessMessage();
+            } else {
+                // Display an error message
+                $('#login-error').text("Invalid username or password");
+            }
+        });
+    });
+</script>
+
+
+
+<script>
+    $(window).on("load", function() {
+        // When the page is fully loaded, hide the preloader
+        $(".preloader").fadeOut("slow");
+
+        // Your existing code here (e.g., the code for login, success message, etc.)
+        $(document).ready(function() {
+            // Your existing code goes here
+        });
+    });
+</script>
+
+
+
+<script>
+    // Handle tab item click
+    $('.tab-item').click(function() {
+        // Hide all tab contents
+        $('.tab-content').hide();
+        // Remove the 'active' class from all tab items
+        $('.tab-item.active').removeClass('active');
+        // Get the data-tab attribute value of the clicked tab
+        var tabId = $(this).data('tab');
+
+        if (tabId === 'logout') {
+            // Handle the Log Out tab click event
+            // You can add your log out logic here
+            // For example, you can clear any session data or perform other necessary actions
+            // Then, redirect to the login screen or perform any other desired actions
+
+            // Here, I'm just displaying a message for demonstration purposes
+            alert("Logged out!");
+
+            // You can add more logic here to perform a proper log out operation
+        } else {
+            // Show the corresponding tab content
+            $('#' + tabId + '-content').show();
+            // Add the 'active' class to the clicked tab
+            $(this).addClass('active');
+        }
+    });
+</script>
 
 </html>
