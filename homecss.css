@@ -1,0 +1,36 @@
+/*Start */
+
+
+/*finish */
+
+
+/*ganpat image*/
+
+
+/*Start */
+
+.wave {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    left: 0;
+    size: 0%;
+    border: 1px solid #000000;
+}
+
+.ganpat {
+    width: 10%;
+    height: 70px;
+    position: absolute;
+    position: fixed;
+    left: 0%;
+}
+
+
+/* Make the image to responsive */
+
+
+/* The overlay effect - lays on top of the container and over the image */
+
+
+/*finish <link rel="stylesheet" href="studentifocss.css">*/
