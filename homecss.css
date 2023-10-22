@@ -7,6 +7,39 @@
 
 /* Common CSS */
 
+.tab-content {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+ 
+
+
+
+
+.button {
+    /* Your button styles here */
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 50px; 
+    text-align: center;
+    text-decoration: none;  
+    outline: none;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 15px;
+    
+  }
+  
+
 a,
 p {
     transition: 0.3s ease;
