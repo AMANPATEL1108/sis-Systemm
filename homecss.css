@@ -147,6 +147,14 @@ p {
     padding: 0 50px;
 }
 
+
+student-button{
+    background-color:;
+    color: #fff;
+    position: center;
+
+}
+
 .header-inner {
     display: flex;
     justify-content: space-between;
