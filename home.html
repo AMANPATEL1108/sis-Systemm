@@ -56,13 +56,23 @@
                     <div class="tab-content" id="teacher-content" data-tab-content="teacher">Teacher</div>
                     <div class="tab-content" id="about-content" data-tab-content="about">About</div>
                     <div class="tab-content" id="student-content" data-tab-content="student">
-                        <div class="side-inner">
-                            <ul class="tabing-list">
-                                <li class="tab-item" data-tab="home">Information </li>
-                                <li class="tab-item" data-tab="teacher">Attendance</li>
-                                <li class="tab-item" data-tab="student">Marks</li>
-                                <li class="tab-item" data-tab="about">Material</li>
-                            </ul>
+                        <div class="button-section">
+                            <div class="button-row">
+                                <button class="button" onclick="toggleContent(1)">Information</button>
+                                <button class="button" onclick="toggleContent(2)">Attandance</button>
+                                <button class="button" onclick="toggleContent(3)">Material</button>
+                                <button class="button" onclick="toggleContent(4)">Marks</button>
+                            </div>
+                            <div class="button-content">
+                                <div class="content active">Information Content for student</div>
+                                <div class="content">Attandance Content for student</div>
+                                <div class="content">Material Content for student</div>
+                                <div class="content">Marks</div>
+                            </div>
+                        </div>
+                    
+                        <script src="script.js"></script>
+                            </div>
                         </div>
                 </div>
 
@@ -75,7 +85,20 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+
+
+
 <script>
+
+function toggleContent(buttonNumber) {
+    // Hide all content elements
+    const contentElements = document.querySelectorAll('.button-content .content');
+    contentElements.forEach(contentElement => contentElement.style.display = 'none');
+
+    // Show the content associated with the clicked button
+    const contentToShow = document.querySelector(`.button-content .content:nth-child(${buttonNumber})`);
+    contentToShow.style.display = 'block';
+}
     $(document).ready(function() {
         // Initially hide the sidebar and tab content
         $('.sidebar-main').hide();

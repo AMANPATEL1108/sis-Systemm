@@ -5,6 +5,48 @@
 }
 
 
+/* .button-section {
+    text-align: 20;
+} */
+
+.tab-content {
+    text-align: center; /* Center text horizontally */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center;
+    height: 100vh; /* Adjust height as needed */
+}
+
+
+.button-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+
+.button-content .content {
+    display: none;
+    margin-top: 20px;
+}
+
+
+
 /* Common CSS */
 
 .tab-content {
@@ -149,8 +191,8 @@ p {
 
 
 student-button{
-    background-color:;
-    color: #fff;
+    background-color:151212;
+    color: #f3f3f3;
     position: center;
 
 }
