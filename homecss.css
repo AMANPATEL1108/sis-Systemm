@@ -5,6 +5,12 @@
 }
 
 
+/* In your CSS file (homecss.css) */
+.header {
+    background-image: url('C:\Users\ASUS\Desktop\sis\photos\wave.jpg');
+    /* Add other CSS properties as needed */
+}
+
 /* .button-section {
     text-align: 20;
 } */

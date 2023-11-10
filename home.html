@@ -9,7 +9,10 @@
     <div class="preloader">
         <div class="loader"></div>
     </div>
-    <header style="background-image :url(C:\Users\ASUS\Desktop\sis\photos\wave.jpg);">
+    <header style="background-image: url('C:\Users\ASUS\Desktop\sis\photos\wave.jpg');">
+        <!-- Your header content goes here -->
+    </header>
+    
         <div class="container ">
             <div class="header-inner ">
                 <div class="header-logo ">
@@ -58,7 +61,7 @@
                     <div class="tab-content" id="student-content" data-tab-content="student">
                         <div class="button-section">
                             <div class="button-row">
-                                <button class="button" onclick="toggleContent(1)">Information</button>
+                                <button class="button" id="information-button" onclick="toggleContent(1)">Information</button>
                                 <button class="button" onclick="toggleContent(2)">Attandance</button>
                                 <button class="button" onclick="toggleContent(3)">Material</button>
                                 <button class="button" onclick="toggleContent(4)">Marks</button>
