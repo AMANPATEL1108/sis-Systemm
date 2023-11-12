@@ -5,6 +5,16 @@
 }
 
 
+.button-content {
+    direction: ltr; /* This sets the text direction to left-to-right */
+    text-align: left; /* This aligns the text to the left within the container */
+}
+
+.content {
+    margin-bottom: 10px; /* Optional: Adds some space between each content item */
+}
+
+
 /* In your CSS file (homecss.css) */
 .header {
     background-image: url('C:\Users\ASUS\Desktop\sis\photos\wave.jpg');
