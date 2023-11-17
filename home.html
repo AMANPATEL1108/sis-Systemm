@@ -10,9 +10,6 @@
         <div class="loader"></div>
     </div>
     <header style="background-image: url('C:\Users\ASUS\Desktop\sis\photos\wave.jpg');">
-
-       
-    
         <div class="container ">
             <div class="header-inner ">
                 <div class="header-logo ">
@@ -47,17 +44,30 @@
                     <li class="tab-item" data-tab="home">Home </li>
                     <li class="tab-item" data-tab="teacher">Teacher</li>
                     <li class="tab-item" data-tab="student">Student</li>
+                    <li class="tab-item" data-tab="editStudent">Edit Student</li>
                     <li class="tab-item" data-tab="about">About</li>
                     <li class="tab-item" data-tab="logout" id="logout-link-msg">Log Out</li>
                 </ul>
             </div>
         </div>
+
         <div class="site-content">
             <div class="site-con-inner">
                 <div class="student-button">
-                    <div class="tab-content" id="home-content" align-items: center; justify-content:center; data-tab-content="home"> <div><h2>U.V Patel College</h2> </div></div>
+                    <div class="tab-content" id="home-content" align-items: center; justify-content:center; data-tab-content="home">
+                        <div><h2>U.V Patel College</h2></div>
+                    </div>
                     <div class="tab-content" id="teacher-content" data-tab-content="teacher">Teacher</div>
                     <div class="tab-content" id="about-content" data-tab-content="about">About</div>
+                    <div class="tab-content" id="editstudent-content" data-tab-content="editStudent">
+                        <!-- Edit Student content goes here -->
+                        
+                        
+                        
+                        <div>
+                            <!-- Your HTML code for editing student information goes here -->
+                        </div>
+                    </div>
                     <div class="tab-content" id="student-content" data-tab-content="student">
                         <div class="button-section">
                             <div class="button-row">
@@ -67,108 +77,181 @@
                                 <button class="button" onclick="toggleContent(4)">Marks</button>
                             </div>
                             <div class="button-content">
-                                <div class="content active">
-                                    <h6>Name:</h6>
-                                    <h6>En No:</h6>
-                                    <h6>Course:</h6>
-                                    <h6>Class:</h6>
-                                    <h6>Batch:</h6>
-                                    <h6>Address:</h6>
-                                    <h6>Hosteler/Transportation:</h6>
-                                    
+                                <!-- Content sections for Information, Attendance, Material, and Marks go here -->
+                                <div class="button-content">
+                                    <div class="content active">
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">Name: <span id="user-name"></span></label><br><br>
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">En No: <span id="user-enrollment"></span></label><br><br>
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">Course: <span id="user-course"></span></label><br><br>
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">Class: <span id="user-class"></span></label><br><br>
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">Batch: <span id="user-batch"></span></label><br><br>
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">Address: <span id="user-address"></span></label><br><br>
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">Hosteler/Transportation: <span id="user-hosteler"></span></label><br><br>
+                                    </div>
+                                    <div class="content">
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">sub1 lecture: <span id="sub1-lecture"></span></label><br><br>
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">sub1 lab: <span id="sub1-lab"></span></label><br><br>
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">sub2 lecture: <span id="sub2-lecture"></span></label><br><br>
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">sub2 lab: <span id="sub2-lab"></span></label><br><br>
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">sub3 lecture: <span id="sub3-lecture"></span></label><br><br>
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">sub3 lab: <span id="sub3-lab"></span></label><br><br>
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">sub4 lecture: <span id="sub4-lecture"></span></label><br><br>
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">sub4 lab: <span id="sub4-lab"></span></label><br><br>
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">sub5 lecture: <span id="sub5-lecture"></span></label><br><br>
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">sub5 lab: <span id="sub5-lab"></span></label><br><br>
+                                    </div>
+                                    <div class="content">
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">sub1 material: <span id="sub1-material"></span></label><br><br>
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">sub2 material: <span id="sub2-material"></span></label><br><br>
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">sub3 material: <span id="sub3-material"></span></label><br><br>
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">sub4 material: <span id="sub4-material"></span></label><br><br>
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">sub5 material: <br><span id="sub5-material"></span></label><br><br>
+                                    </div>
+                                    <div class="content">
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">sub1 marks: <span id="sub1-marks"></span></label><br><br>
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">sub2 marks: <span id="sub2-marks"></span></label><br><br>
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">sub3 marks: <span id="sub3-marks"></span></label><br><br>
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">sub4 marks: <span id="sub4-marks"></span></label><br><br>
+                                        <label style="font-weight: bold; font-family: 'Times New Roman', Times, serif;">sub5 marks: <span id="sub5-marks"></span></label><br><br>
+                                    </div>
                                 </div>
-                                <div class="content">
-                                    <h6>sub1 lecture:</h6>
-                                    <h6>sub1 lab:</h6>
-                                    <h6>sub2 lecture:</h6>
-                                    <h6>sub2 lab:</h6>
-                                    <h6>sub3 lecture:</h6>
-                                    <h6>sub3 lab:</h6>
-                                    <h6>sub4 lecture:</h6>
-                                    <h6>sub4 lab:</h6>
-                                    <h6>sub5 lecture:</h6>
-                                    <h6>sub5 lab:</h6>
-
-                                </div>
-                                <div class="content">
-                                    <h6>sub1 material:</h6>
-                                    <h6>sub2 material:</h6>
-                                    <h6>sub3 material:</h6>
-                                    <h6>sub4 material:</h6>
-                                    <h6>sub5 material:</h6>
-                                </div>
-                                <div class="content">
-                                    <h6>sub1 marks:</h6>
-                                    <h6>sub2 marks:</h6>
-                                    <h6>sub3 marks:</h6>
-                                    <h6>sub4 marks:</h6>
-                                    <h6>sub5 marks:</h6>
-                                </div>
+                                
                             </div>
                         </div>
-                    
-                        <script src="script.js"></script>
-                            </div>
-                        </div>
+                    </div>
                 </div>
-
             </div>
         </div>
     </main>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
 
-</body>
+    <script>
+        // Assuming you have user data available after login, update the following example with actual data
+        var userData = {
+            name: "Patel Aman Ambalal",
+            enrollment: "12345",
+            course: "Computer Science",
+            class:"CEIT-B",
+            batch:"b1",
+            address:"bayad",
+            hostel:"uma"
+            
+            // ... (update other user data)
+        };
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        // Update the content with user-specific data
+        $('#user-name').text(userData.name);
+        $('#user-enrollment').text(userData.enrollment);
+        $('#user-course').text(userData.course);
+        $('#user-class').text(userData.class);
+        $('#user-batch').text(userData.batch);
+        $('#user-address').text(userData.address);
+        $('#user-hosteler').text(userData.hostel);
 
 
+        // ... (update other user data)
 
+        // Similarly, update the content for sub1, sub2, etc.
 
-<script>
+        function toggleContent(buttonNumber) {
+            // Hide all content elements
+            const contentElements = document.querySelectorAll('.button-content .content');
+            contentElements.forEach(contentElement => contentElement.style.display = 'none');
 
-function toggleContent(buttonNumber) {
-    // Hide all content elements
-    const contentElements = document.querySelectorAll('.button-content .content');
-    contentElements.forEach(contentElement => contentElement.style.display = 'none');
-
-    // Show the content associated with the clicked button
-    const contentToShow = document.querySelector(`.button-content .content:nth-child(${buttonNumber})`);
-    contentToShow.style.display = 'block';
-}
-    $(document).ready(function() {
-        // Initially hide the sidebar and tab content
-        $('.sidebar-main').hide();
-        $('.tab-content').hide();
-
-        // Define predefined username and password
-        var predefinedUsername = "admin";
-        var predefinedPassword = "admin";
-
-        // Function to show the success message and logout link
-        function showSuccessMessage() {
-            $('.login-screen').hide();
-            $('.sidebar-main').show();
-            $('.tab-content').hide(); // Hide all tab contents
-            $('#home-content').show(); // Show the About tab content by default
-            $('.tab-item.active').removeClass('active'); // Remove active class from all tabs
-            $('.success-msg').show();
-
-            // Handle logout link click event
-            $('#logout-link, #logout-link-msg').click(function(e) {
-                e.preventDefault();
-                // Hide the success message and logout link
-                $('.success-msg').hide();
-                // Show the login screen
-                $('.login-screen').show();
-                // Hide the sidebar and tab content
-                $('.sidebar-main').hide();
-                $('.tab-content').hide();
-                // Clear username and password fields
-                $('#username').val('');
-                $('#password').val('');
-            });
+            // Show the content associated with the clicked button
+            const contentToShow = document.querySelector(`.button-content .content:nth-child(${buttonNumber})`);
+            contentToShow.style.display = 'block';
         }
+    </script>
 
+    <script>
+        $(document).ready(function() {
+            // Initially hide the sidebar and tab content
+            $('.sidebar-main').hide();
+            $('.tab-content').hide();
+
+            // Define predefined username and password
+            var predefinedUsername = "admin";
+            var predefinedPassword = "admin";
+
+            // Function to show the success message and logout link
+            function showSuccessMessage() {
+                $('.login-screen').hide();
+                $('.sidebar-main').show();
+                $('.tab-content').hide(); // Hide all tab contents
+                $('#home-content').show(); // Show the About tab content by default
+                $('.tab-item.active').removeClass('active'); // Remove active class from all tabs
+                $('.success-msg').show();
+
+                // Handle logout link click event
+                $('#logout-link, #logout-link-msg').click(function(e) {
+                    e.preventDefault();
+                    // Hide the success message and logout link
+                    $('.success-msg').hide();
+                    // Show the login screen
+                    $('.login-screen').show();
+                    // Hide the sidebar and tab content
+                    $('.sidebar-main').hide();
+                    $('.tab-content').hide();
+                    // Clear username and password fields
+                    $('#username').val('');
+                    $('#password').val('');
+                });
+            }
+
+            // Handle tab item click
+            $('.tab-item').click(function() {
+                // Hide all tab contents
+                $('.tab-content').hide();
+                // Remove the 'active' class from all tab items
+                $('.tab-item.active').removeClass('active');
+                // Get the data-tab attribute value of the clicked tab
+                var tabId = $(this).data('tab');
+                // Show the corresponding tab content
+                $('#' + tabId + '-content').show();
+                // Add the 'active' class to the clicked tab
+                $(this).addClass('active');
+            });
+
+            // Handle login button click
+            $('#login-button').click(function() {
+                var enteredUsername = $('#username').val();
+                var enteredPassword = $('#password').val();
+
+                // Check if the entered username and password match the predefined credentials
+                if (enteredUsername === predefinedUsername && enteredPassword === predefinedPassword) {
+                    // Show the success message and logout link
+                    showSuccessMessage();
+
+                    // Show/hide "Edit Student" based on the logged-in user
+                    if (enteredUsername === "admin") {
+                        $('[data-tab="editStudent"]').show();
+                    } else {
+                        $('[data-tab="editStudent"]').hide();
+                    }
+                } else {
+                    // Display an error message
+                    $('#login-error').text("Invalid username or password");
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $(window).on("load", function() {
+            // When the page is fully loaded, hide the preloader
+            $(".preloader").fadeOut("slow");
+
+            // Your existing code here (e.g., the code for login, success message, etc.)
+            $(document).ready(function() {
+                // Your existing code goes here
+            });
+        });
+    </script>
+
+    <script>
         // Handle tab item click
         $('.tab-item').click(function() {
             // Hide all tab contents
@@ -177,72 +260,25 @@ function toggleContent(buttonNumber) {
             $('.tab-item.active').removeClass('active');
             // Get the data-tab attribute value of the clicked tab
             var tabId = $(this).data('tab');
-            // Show the corresponding tab content
-            $('#' + tabId + '-content').show();
-            // Add the 'active' class to the clicked tab
-            $(this).addClass('active');
-        });
 
-        // Handle login button click
-        $('#login-button').click(function() {
-            var enteredUsername = $('#username').val();
-            var enteredPassword = $('#password').val();
+            if (tabId === 'logout') {
+                // Handle the Log Out tab click event
+                // You can add your log out logic here
+                // For example, you can clear any session data or perform other necessary actions
+                // Then, redirect to the login screen or perform any other desired actions
 
-            // Check if the entered username and password match the predefined credentials
-            if (enteredUsername === predefinedUsername && enteredPassword === predefinedPassword) {
-                // Show the success message and logout link
-                showSuccessMessage();
+                // Here, I'm just displaying a message for demonstration purposes
+                alert("Logged out!");
+
+                // You can add more logic here to perform a proper log out operation
             } else {
-                // Display an error message
-                $('#login-error').text("Invalid username or password");
+                // Show the corresponding tab content
+                $('#' + tabId + '-content').show();
+                // Add the 'active' class to the clicked tab
+                $(this).addClass('active');
             }
         });
-    });
-</script>
-
-
-
-<script>
-    $(window).on("load", function() {
-        // When the page is fully loaded, hide the preloader
-        $(".preloader").fadeOut("slow");
-
-        // Your existing code here (e.g., the code for login, success message, etc.)
-        $(document).ready(function() {
-            // Your existing code goes here
-        });
-    });
-</script>
-
-
-
-<script>
-    // Handle tab item click
-    $('.tab-item').click(function() {
-        // Hide all tab contents
-        $('.tab-content').hide();
-        // Remove the 'active' class from all tab items
-        $('.tab-item.active').removeClass('active');
-        // Get the data-tab attribute value of the clicked tab
-        var tabId = $(this).data('tab');
-
-        if (tabId === 'logout') {
-            // Handle the Log Out tab click event
-            // You can add your log out logic here
-            // For example, you can clear any session data or perform other necessary actions
-            // Then, redirect to the login screen or perform any other desired actions
-
-            // Here, I'm just displaying a message for demonstration purposes
-            alert("Logged out!");
-
-            // You can add more logic here to perform a proper log out operation
-        } else {
-            // Show the corresponding tab content
-            $('#' + tabId + '-content').show();
-            // Add the 'active' class to the clicked tab
-            $(this).addClass('active');
-        }
-    });
-</script>
+    </script>
+</body>
 
 </html>
