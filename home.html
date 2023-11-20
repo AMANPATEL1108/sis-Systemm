@@ -136,19 +136,62 @@
             class:"CEIT-B",
             batch:"b1",
             address:"bayad",
-            hostel:"uma"
+            hostel:"uma",
+            sub1attandance:"50",
+            sub1lab:"25",
+            sub2attandance:"79",
+            sub2lab:"26",
+            sub3attandance:"09",
+            sub3lab:"28",
+            sub4attandance:"34",
+            sub4lab:"66",
+            sub5attandance:"35",
+            sub5lab:"23",
+            sub1material:"",
+            sub2material:"",
+            sub3material:"",
+            sub4material:"",
+            sub5material:"",
+            sub1marks:"15",
+            sub2marks:"20",
+            sub3marks:"10",
+            sub4marks:"12",
+            sub5marks:"17",
             
             // ... (update other user data)
         };
 
         // Update the content with user-specific data
         $('#user-name').text(userData.name);
-        $('#user-enrollment').text(userData.enrollment);
+        $('#user-enrollment').text(userData.enrollment);    
         $('#user-course').text(userData.course);
         $('#user-class').text(userData.class);
         $('#user-batch').text(userData.batch);
         $('#user-address').text(userData.address);
         $('#user-hosteler').text(userData.hostel);
+        $('#sub1-lecture').text(userData.sub1attandance+"%");
+        $('#sub1-lab').text(userData.sub1lab+"%");
+        $('#sub2-lecture').text(userData.sub2attandance+"%");
+        $('#sub2-lab').text(userData.sub1attandance+"%");
+        $('#sub3-lab').text(userData.sub1lab+"%");
+        $('#sub3-lecture').text(userData.sub2attandance+"%");
+        $('#sub4-lab').text(userData.sub3lab+"%");
+        $('#sub4-lecture').text(userData.sub3attandance+"%");
+        $('#sub4-lab').text(userData.sub4lab+"%");
+        $('#sub5-lecture').text(userData.sub5attandance+"%");
+        $('#sub5-lab').text(userData.sub4lab+"%");
+        $('#sub1-material').html('<a href="https://drive.google.com/file/d/1IaPfIUBPVuPMZwIAWtHy4RTGcxiyZbPi/view?usp=drive_link">' + userData.sub1material + 'sub-1 material</a>');
+        $('#sub2-material').html('<a href="https://drive.google.com/file/d/1IaPfIUBPVuPMZwIAWtHy4RTGcxiyZbPi/view?usp=drive_link">' + userData.sub2material + 'sub-2 material</a>');
+        $('#sub3-material').html('<a href="https://drive.google.com/file/d/1IaPfIUBPVuPMZwIAWtHy4RTGcxiyZbPi/view?usp=drive_link">' + userData.sub3material + 'sub-3 material</a>');
+        $('#sub4-material').html('<a href="https://drive.google.com/file/d/1IaPfIUBPVuPMZwIAWtHy4RTGcxiyZbPi/view?usp=drive_link">' + userData.sub4material + 'sub-4 material</a>');
+        $('#sub5-material').html('<a href="https://drive.google.com/file/d/1IaPfIUBPVuPMZwIAWtHy4RTGcxiyZbPi/view?usp=drive_link">' + userData.sub5material + 'sub-5 material</a>');
+        $('#sub1-marks').text(userData.sub1marks);
+        $('#sub2-marks').text(userData.sub2marks);
+        $('#sub3-marks').text(userData.sub3marks);
+        $('#sub4-marks').text(userData.sub4marks);
+        $('#sub5-marks').text(userData.sub5marks);
+        
+
 
 
         // ... (update other user data)
