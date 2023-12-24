@@ -44,7 +44,7 @@
                     <li class="tab-item" data-tab="home">Home </li>
                     <li class="tab-item" data-tab="teacher">Teacher</li>
                     <li class="tab-item" data-tab="student">Student</li>
-                    <li class="tab-item" data-tab="editStudent">Edit Student</li>
+                    <li class="tab-item" data-tab="editStudent">edit Student</li>
                     <li class="tab-item" data-tab="about">About</li>
                     <li class="tab-item" data-tab="logout" id="logout-link-msg">Log Out</li>
                 </ul>
@@ -54,29 +54,9 @@
         <div class="site-content">
             <div class="site-con-inner">
                 <div class="student-button">
-                    <div class="tab-content" id="home-content" align-items: center; justify-content:center; data-tab-content="home">
-                        <div><h2>U.V Patel College</h2></div>
-                    </div>
+                    <div class="tab-content" id="home-content" align-items: center; justify-content:center; data-tab-content="home"><div><h2>U.V Patel College</h2></div></div>
                     <div class="tab-content" id="teacher-content" data-tab-content="teacher">Teacher</div>
-                    <div class="tab-content" id="about-content" data-tab-content="about">About</div>
-                    <div class="tab-content" id="editstudent-content" data-tab-content="editStudent">
-                        <!-- Existing content -->
-                    
-                        <div class="edit-student-form" style="display: none;">
-                            <!-- Edit Student form goes here -->
-                        </div>
-                    
-                        <div class="manage-students">
-                            <button type="button" onclick="updateStudent()">Update Student</button>
-                            <button type="button" onclick="deleteStudent()">Delete Student</button>
-                            <button type="button" onclick="searchStudent()">Search Student</button>
-                            <button type="button" onclick="addstudent()">add Student</button>
-                        </div>
-                    
-                        <div class="search-results" style="display: none;">
-                            <!-- Search Results display goes here -->
-                        </div>
-                    </div>
+                    <div class="tab-content" id="editStudent-content" data-tab-content="editStudent">edit student</div>
                     <div class="tab-content" id="student-content" data-tab-content="student">
                         <div class="button-section">
                             <div class="button-row">
@@ -128,6 +108,10 @@
                             </div>
                         </div>
                     </div>
+                    <div class="tab-content" id="about-content" data-tab-content="about">About</div>
+
+
+                    
                 </div>
             </div>
         </div>
@@ -136,10 +120,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
 
+    
     <script>
-
-
-
 
 
         // Assuming you have user data available after login, update the following example with actual data
@@ -308,32 +290,6 @@
         });
     </script>
 
-<script>
-
-    // Function to update student information
-    function updateStudent() {
-        // Show the edit student form
-        showEditStudentForm();
-    }
-
-    // Function to delete student
-    function deleteStudent() {
-        // Implement your logic to delete a student
-        // You can prompt for confirmation before deleting
-        // For demonstration purposes, I'm just displaying an alert
-        alert("Student deleted!");
-    }
-
-    // Function to search for a student
-    function searchStudent() {
-        // Implement your logic to search for a student
-        // Display the search results in the search-results div
-        // For demonstration purposes, I'm just displaying an alert
-        alert("Searching for a student...");
-    }
-
- 
-</script>
 
 
 
